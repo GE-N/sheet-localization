@@ -29,7 +29,8 @@ documentName = sys.argv[2]
 targetName = sys.argv[3]
 
 print("Connecting to Google Sheets API")
-scope = ["https://spreadsheets.google.com/feeds"]
+scope = ['https://spreadsheets.google.com/feeds',
+         'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name(credentialsFileName, scope)
 client = gspread.authorize(credentials)
 

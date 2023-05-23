@@ -109,7 +109,7 @@ def iosGenerateLocalizationFiles(translations, languages):
             os.makedirs(dirName)
         filePath = dirName + "/" + IOS_LOCALIZATION_FILE_NAME
         print("Generating iOS localization file '{0}'".format(filePath))
-        with open(filePath, "w") as f:
+        with open(filePath, "wb") as f:
             f.write(iosLocalization(translations, languageId))
 
 def iosGenerateSwiftConstantsFile(translations, languages):
